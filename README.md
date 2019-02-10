@@ -27,6 +27,30 @@ http://localhost:8081/compras/compra                 |POST  | Criar uma compra  
 http://localhost:8081/compras/compra/:id             |PUT   | Confirmar a compra Por ID             |                       |
 http://localhost:8081/compras/compra/:id             |DELETE| Cancelar a compra Por Id              |                       |
 http://localhost:8081/compras/compra/:id             |GET   | Consultar as compra Por Id            |                       |
-http://localhost:8081//compras/:cpf/compra           |GET   | Consultar todas as compras por CPF    |                       |
+http://localhost:8081/compras/:cpf/compra            |GET   | Consultar todas as compras por CPF    |                       |
 
 A API permite inserir os dados via JSON, no passo a passo é dado um exemplo desse tipo de inserção.
+
+## Executando
+
+Clonar o repositorio https://github.com/freeleft/operacao_cambio
+
+### Pre-Requisitos
+
+Necessário ter o [Node.js](https://nodejs.org/en/download/) instalado para rodar a aplicação.
+
+Necessário ter o [XAMPP Control Painel](https://www.apachefriends.org/download.html) para a utilização da base de dados MySQL.
+
+### Instalando as Dependências
+
+Abre o prompt de comando e entrar na pasta do projeto (Sugestão de caminho)
+
+```
+cd "C:\Projetos\operacao_cambio"
+```
+
+Em seguida usar o npm para resolver as dependencias:
+
+```
+npm install
+```
