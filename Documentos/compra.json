@@ -1,0 +1,7 @@
+{
+    "cpf": "11111111111",
+    "moeda":"USD",
+    "cotacao":3.80,
+    "quantidade":100,
+    "descricao":"comproando moeda"
+}

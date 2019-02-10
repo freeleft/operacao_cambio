@@ -1,0 +1,6 @@
+npm install --save express
+npm install --save consign
+npm install --save body-parser
+npm install --save express-validator
+npm install --save mysql
+npm install --save validar-cpf
