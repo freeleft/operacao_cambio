@@ -1,5 +1,7 @@
+var logger = require('../servicos/logger.js');
+var validarCpf = require('validar-cpf');
+
 module.exports = function(app){
-  var validarCpf = require('validar-cpf');
 
   app.post('/compras/compra', function(req, res){
 
@@ -11,40 +13,35 @@ module.exports = function(app){
     var erros = req.validationErrors();
 
     if (erros){
-      console.log('Erros de validacao encontrados');
       res.status(400).send(erros);
       return;
     }
 
     var compra = req.body;
-
     if (validarCpf(compra.cpf) == false)
     {
-      console.log('CPF invalido');
       res.status(400).send('CPF Invalido');
       return;
     }
 
-    console.log('processando uma requisicao de uma nova compra');
+    logger.info('processando uma requisicao de uma nova compra');
 
     compra.valor = compra.cotacao * compra.quantidade;
     compra.status = 'CRIADO';
     compra.data = new Date;
-
-    console.log(compra);
 
     var connection = app.persistencia.connectionFactory();
     var compraDao = new app.persistencia.CompraDao(connection);
 
     compraDao.salvar(compra, function(erro, resultado){
       if(erro){
-        console.log('Erro ao inserir no banco:' + erro);
+        logger.info('Erro ao inserir no banco:' + erro);
         res.status(500).send(erro);
         return;
       }
 
       compra.id = resultado.insertId;
-      console.log('compra criada');
+      logger.info('compra criada');
 
       res.location('/compras/compra/' + compra.id);
 
@@ -75,15 +72,18 @@ module.exports = function(app){
     compra.id = id;
     compra.status = 'CONFIRMADO';
 
+    logger.info('processando a confirmação da compra referente ao ID: ' + id);
+
     var connection = app.persistencia.connectionFactory();
     var compraDao = new app.persistencia.CompraDao(connection);
 
     compraDao.atualizar(compra, function(erro){
         if (erro){
+          logger.info('Erro ao confirmar no banco:' + erro);
           res.status(500).send(erro);
           return;
         }
-        console.log('compra criada');
+        logger.info('compra confirmada');
         res.send(compra);
     });
   });
@@ -95,15 +95,18 @@ module.exports = function(app){
     compra.id = id;
     compra.status = 'CANCELADO';
 
+    logger.info('processando o cancelamento da compra referente ao ID: ' + id);
+
     var connection = app.persistencia.connectionFactory();
     var compraDao = new app.persistencia.CompraDao(connection);
 
     compraDao.atualizar(compra, function(erro){
         if (erro){
+          logger.info('Erro ao excluir no banco:' + erro);
           res.status(500).send(erro);
           return;
         }
-        console.log('compra cancelada');
+        logger.info('compra cancelada');
         res.status(204).send(compra);
     });
   });
@@ -111,17 +114,18 @@ module.exports = function(app){
   app.get('/compras/compra/:id', function(req, res){
     var id = req.params.id;
 
-    console.log('consultando compras:' + id);
+    logger.info('consultando a compra: ' + id);
 
     var connection = app.persistencia.connectionFactory();
     var compraDao = new app.persistencia.CompraDao(connection);
 
     compraDao.buscarPorId(id, function(erro, resultado){
         if (erro){
+          logger.info('Erro ao consultar no banco:' + erro);
           res.status(500).send(erro);
           return;
         }
-        console.log('compra encontrada');
+        logger.info('compra encontrada');
         res.json(resultado);
     });
   });
@@ -131,22 +135,23 @@ module.exports = function(app){
 
     if (validarCpf(cpf) == false)
     {
-      console.log('CPF invalido');
+      logger.info('CPF invalido');
       res.status(400).send('CPF Invalido');
       return;
     }
 
-    console.log('consultando compras:' + cpf);
+    logger.info('consultando as compras pelo CPF: ' + cpf);
 
     var connection = app.persistencia.connectionFactory();
     var compraDao = new app.persistencia.CompraDao(connection);
 
     compraDao.buscarPorCpf(cpf, function(erro, resultado){
         if (erro){
+          logger.info('Erro ao consultar no banco:' + erro);
           res.status(500).send(erro);
           return;
         }
-        console.log('compras encontradas');
+        logger.info('compras encontradas');
         res.json(resultado);
     });
   });

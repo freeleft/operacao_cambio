@@ -1,1 +1,11 @@
-CREATE TABLE `cambio`.`compras` ( `id` INT NOT NULL AUTO_INCREMENT , `cpf` VARCHAR(50) NOT NULL , `moeda` VARCHAR(3) NOT NULL , `cotacao` DECIMAL(13,2) NOT NULL , `quantidade` INT NOT NULL , `descricao` DATE NOT NULL , `status` VARCHAR(50) NOT NULL , `data` DATE NOT NULL , `valor` DECIMAL(13,2) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `cambio`.`compras`
+  ( `id` INT NOT NULL AUTO_INCREMENT ,
+    `cpf` VARCHAR(50) NOT NULL ,
+    `moeda` VARCHAR(3) NOT NULL ,
+    `cotacao` DECIMAL(13,2) NOT NULL ,
+    `quantidade` INT NOT NULL ,
+    `descricao` DATE NOT NULL ,
+    `status` VARCHAR(50) NOT NULL ,
+    `data` DATE NOT NULL ,
+    `valor` DECIMAL(13,2) NOT NULL ,
+PRIMARY KEY (`id`)) ENGINE = InnoDB;
