@@ -41,6 +41,14 @@ Necessário ter o [Node.js](https://nodejs.org/en/download/) instalado para roda
 
 Necessário ter o [XAMPP Control Painel](https://www.apachefriends.org/download.html) para a utilização da base de dados MySQL.
 
+## XAMPP usado no desenvolvimento, tela de gerenciamento
+
+## XAMPP usado no desenvolvimento, criação de banco de dados
+
+Criar a base de dados com o nome: cambio
+
+Excutar o script contido na pasta  do projeto
+
 ### Instalando as Dependências
 
 Abre o prompt de comando e entrar na pasta do projeto (Sugestão de caminho)
