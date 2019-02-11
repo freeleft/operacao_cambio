@@ -15,7 +15,6 @@
 - MySQL via XAMPP Control Painel
 - JSON
 - Postman
-- Atom
 
 ## Testando a Aplicação no Postman:
 
@@ -42,23 +41,60 @@ Necessário ter o [Node.js](https://nodejs.org/en/download/) instalado para roda
 Necessário ter o [XAMPP Control Painel](https://www.apachefriends.org/download.html) para a utilização da base de dados MySQL.
 
 ## XAMPP usado no desenvolvimento, tela de gerenciamento
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp1.PNG)
 
 ## XAMPP usado no desenvolvimento, criação de banco de dados
 
 Criar a base de dados com o nome: cambio
 
-Excutar o script contido na pasta  do projeto
+Excutar o script contido na pasta .\Documentos\sql.txt do projeto
 
-### Instalando as Dependências
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp2.PNG)
 
-Abre o prompt de comando e entrar na pasta do projeto (Sugestão de caminho)
+## Passos a Passo para executar a API com Command Prompt
 
-```
-cd "C:\Projetos\operacao_cambio"
-```
+### Clonando o diretório
+Utilizar a opção de clone ou download para a instalação do projeto na maquina.
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_01.PNG)
 
-Em seguida usar o npm para resolver as dependencias:
+Escolha a paste destino de onde será clonado o repositório
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_02.PNG)
 
-```
-npm install
-```
+Após termino da cópia abra o repositorio com o terminal e digite npm install para instalar as dependencias
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_03.PNG)
+
+por fim rode a api com o comando node index.js
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_04.PNG)
+
+# Exemplos de uso com Postman
+
+## Fazendo uma criação de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman1.PNG)
+
+### Resultado de criação de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman2.PNG)
+
+## Fazendo a confirmação da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman3.PNG)
+
+### Resultado da confirmação da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman4.PNG)
+
+## Fazendo o cancelamento da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman5.PNG)
+
+### Resultado do cancelamento da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman6.PNG)
+
+## Fazendo a consulta de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman7.PNG)
+
+### Resultado da consulta de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman8.PNG)
+
+## Fazendo a consulta das compras por CPF
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman9.PNG)
+
+### Resultado da consulta das compras por CPF
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman10.PNG)
+
