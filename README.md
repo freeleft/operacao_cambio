@@ -1,4 +1,5 @@
 # API em Node.Js com banco MySQL, demonstrando o funcionamento de uma API de compra de moedas.
+Feito por: Mario, Otávio e Thiago.
 
 ## Tecnologias e modulos utilizados
 
@@ -10,12 +11,41 @@
 - mysql.js
 - validar-cpf.js
 - winston.js
-- morgan
+- morgan.js
 - RestFul
 - MySQL via XAMPP Control Painel
 - JSON
 - Postman
-- Atom
+
+## Modulos
+#### Express.js
+Para suportar todas as características básicas de uma aplicação web sem que tenhamos que nos preocupar em ficar implementando coisas repetitivas, usaremos o Express. Ele é framework web compatível com as API's fornecidas pelo Node.js. Dentre os benefícios trazidos por ele podemos citar:
+
+isolar o código de tratamento de diferentes urls.
+isolar a escrita do código html da lógica da aplicação.
+responder conteúdos com formatos diferentes, baseado nas informações do request.
+lidar com os métodos de envio de dados, por exemplo requisições feitas com GET e com POST.
+
+#### consign.js
+Modulo utilizado para ensinar ao express já no seu carregamento que ele deve conhecer todos os arquivos de uma determinada pasta. Isso é feito informando a pasta como parâmetro no momento do carregamento do consign.
+
+#### body-parser.js
+Modulo utilizado para recuperar os parâmetros enviados na requisição e deixar disponível na propriedade body.
+
+#### express-validator.js
+Modulo utilizado para validar as entradas dos dados da API.
+
+#### validar-cpf.js
+Modulo utilizado para validar o CPF.
+
+#### mysql.js
+Modulo utilizado para criar a conexão e as operações com o banco de dados MySQL.
+
+#### winston.js
+Modulo utilizado para armazenar os logs das aplicações.
+
+#### morgan.js
+Modulo utilizado para interceptar a execução de cada request e logar os dados da requisição HTTP.
 
 ## Testando a Aplicação no Postman:
 
@@ -41,16 +71,64 @@ Necessário ter o [Node.js](https://nodejs.org/en/download/) instalado para roda
 
 Necessário ter o [XAMPP Control Painel](https://www.apachefriends.org/download.html) para a utilização da base de dados MySQL.
 
-### Instalando as Dependências
+## XAMPP usado no desenvolvimento, tela de gerenciamento
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp1.PNG)
 
-Abre o prompt de comando e entrar na pasta do projeto (Sugestão de caminho)
+## XAMPP usado no desenvolvimento, criação de banco de dados
 
-```
-cd "C:\Projetos\operacao_cambio"
-```
+Criar a base de dados com o nome: cambio
 
-Em seguida usar o npm para resolver as dependencias:
+Excutar o script contido na pasta .\Documentos\sql.txt do projeto
 
-```
-npm install
-```
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp2.PNG)
+
+## Passos a Passo para executar a API com Command Prompt
+
+### Clonando o diretório
+Utilizar a opção de clone ou download para a instalação do projeto na maquina.
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_01.PNG)
+
+Escolha a paste destino de onde será clonado o repositório
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_02.PNG)
+
+Após termino da cópia abra o repositorio com o terminal e digite npm install para instalar as dependencias
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_03.PNG)
+
+por fim rode a api com o comando node index.js
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/clone_04.PNG)
+
+# Exemplos de uso com Postman
+
+## Fazendo uma criação de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman1.PNG)
+
+### Resultado de criação de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman2.PNG)
+
+## Fazendo a confirmação da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman3.PNG)
+
+### Resultado da confirmação da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman4.PNG)
+
+## Fazendo o cancelamento da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman5.PNG)
+
+### Resultado do cancelamento da compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman6.PNG)
+
+## Fazendo a consulta de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman7.PNG)
+
+### Resultado da consulta de uma compra
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman8.PNG)
+
+## Fazendo a consulta das compras por CPF
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman9.PNG)
+
+### Resultado da consulta das compras por CPF
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman10.PNG)
+
+## Log da aplicação
+Será possivel ver os logs da aplicação atraves do arquivo ./logs/operacaocambio.txt
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/log.PNG)
