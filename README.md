@@ -19,12 +19,7 @@ Feito por: Mario, Otávio e Thiago.
 
 ## Modulos
 #### Express.js
-Para suportar todas as características básicas de uma aplicação web sem que tenhamos que nos preocupar em ficar implementando coisas repetitivas, usaremos o Express. Ele é framework web compatível com as API's fornecidas pelo Node.js. Dentre os benefícios trazidos por ele podemos citar:
-
-isolar o código de tratamento de diferentes urls.
-isolar a escrita do código html da lógica da aplicação.
-responder conteúdos com formatos diferentes, baseado nas informações do request.
-lidar com os métodos de envio de dados, por exemplo requisições feitas com GET e com POST.
+Para suportar todas as características básicas de uma aplicação web sem que tenhamos que nos preocupar em ficar implementando coisas repetitivas, usaremos o Express. Ele é framework web compatível com as API's fornecidas pelo Node.js.
 
 #### consign.js
 Modulo utilizado para ensinar ao express já no seu carregamento que ele deve conhecer todos os arquivos de uma determinada pasta. Isso é feito informando a pasta como parâmetro no momento do carregamento do consign.
