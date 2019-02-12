@@ -1,4 +1,5 @@
 # API em Node.Js com banco MySQL, demonstrando o funcionamento de uma API de compra de moedas.
+Feito por: Mario, Otávio e Thiago.
 
 ## Tecnologias e modulos utilizados
 
@@ -10,11 +11,41 @@
 - mysql.js
 - validar-cpf.js
 - winston.js
-- morgan
+- morgan.js
 - RestFul
 - MySQL via XAMPP Control Painel
 - JSON
 - Postman
+
+## Modulos
+#### Express.js
+Para suportar todas as características básicas de uma aplicação web sem que tenhamos que nos preocupar em ficar implementando coisas repetitivas, usaremos o Express. Ele é framework web compatível com as API's fornecidas pelo Node.js. Dentre os benefícios trazidos por ele podemos citar:
+
+isolar o código de tratamento de diferentes urls.
+isolar a escrita do código html da lógica da aplicação.
+responder conteúdos com formatos diferentes, baseado nas informações do request.
+lidar com os métodos de envio de dados, por exemplo requisições feitas com GET e com POST.
+
+#### consign.js
+Modulo utilizado para ensinar ao express já no seu carregamento que ele deve conhecer todos os arquivos de uma determinada pasta. Isso é feito informando a pasta como parâmetro no momento do carregamento do consign.
+
+#### body-parser.js
+Modulo utilizado para recuperar os parâmetros enviados na requisição e deixar disponível na propriedade body.
+
+#### express-validator.js
+Modulo utilizado para validar as entradas dos dados da API.
+
+#### validar-cpf.js
+Modulo utilizado para validar o CPF.
+
+#### mysql.js
+Modulo utilizado para criar a conexão e as operações com o banco de dados MySQL.
+
+#### winston.js
+Modulo utilizado para armazenar os logs das aplicações.
+
+#### morgan.js
+Modulo utilizado para interceptar a execução de cada request e logar os dados da requisição HTTP.
 
 ## Testando a Aplicação no Postman:
 
@@ -98,3 +129,6 @@ por fim rode a api com o comando node index.js
 ### Resultado da consulta das compras por CPF
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman10.PNG)
 
+## Log da aplicação
+Será possivel ver os logs da aplicação atraves do arquivo ./logs/operacaocambio.txt
+![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/log.PNG)
