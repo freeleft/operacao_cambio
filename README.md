@@ -78,7 +78,7 @@ Necessário ter o [XAMPP Control Painel](https://www.apachefriends.org/download.
 
 Criar a base de dados com o nome: cambio
 
-Excutar o script contido na pasta .\Documentos\sql.txt do projeto
+Executar o script contido no link [SQL](https://github.com/freeleft/operacao_cambio/blob/master/Documentos/sql.txt) do projeto.
 
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp2.PNG)
 
@@ -100,30 +100,54 @@ por fim rode a api com o comando node index.js
 # Exemplos de uso com Postman
 
 ## Fazendo uma criação de uma compra
+ROTA                                               | TIPO |              Descrição                |                 Observação       |
+---------------------------------------------------|----- | --------------------------------------|----------------------------------|
+http://localhost:8081/compras/compra               |POST  | Criar uma compra                      |   [Exemplo Json](https://github.com/freeleft/operacao_cambio/blob/master/Documentos/compra.json)
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman1.PNG)
 
 ### Resultado de criação de uma compra
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman2.PNG)
 
 ## Fazendo a confirmação da compra
+
+ROTA                                               | TIPO |              Descrição                |                 Observação       |
+---------------------------------------------------|----- | --------------------------------------|----------------------------------|
+http://localhost:8081/compras/compra/:id           |PUT   | Confirmar a compra Por ID             |                                  |
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman3.PNG)
 
 ### Resultado da confirmação da compra
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman4.PNG)
 
 ## Fazendo o cancelamento da compra
+
+ROTA                                               | TIPO |              Descrição                |                 Observação       |
+---------------------------------------------------|----- | --------------------------------------|----------------------------------|
+http://localhost:8081/compras/compra/:id           |DELETE| Cancelar a compra Por Id              |                                  |
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman5.PNG)
 
 ### Resultado do cancelamento da compra
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman6.PNG)
 
 ## Fazendo a consulta de uma compra
+
+ROTA                                               | TIPO |              Descrição                |                 Observação       |
+---------------------------------------------------|----- | --------------------------------------|----------------------------------|
+http://localhost:8081/compras/compra/:id           |GET   | Consultar as compra Por Id            |                                  |
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman7.PNG)
 
 ### Resultado da consulta de uma compra
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman8.PNG)
 
 ## Fazendo a consulta das compras por CPF
+
+ROTA                                               | TIPO |              Descrição                |                 Observação       |
+---------------------------------------------------|----- | --------------------------------------|----------------------------------|
+http://localhost:8081/compras/:cpf/compra          |GET   | Consultar todas as compras por CPF    |                                  |
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/postman9.PNG)
 
 ### Resultado da consulta das compras por CPF
