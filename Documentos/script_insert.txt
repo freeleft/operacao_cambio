@@ -1,0 +1,4 @@
+INSERT INTO `compras` (`cpf`, `moeda`, `cotacao`, `quantidade`, `descricao`, `status`, `data`, `valor`) 
+VALUES ('11111111111', 'USD', '3,75', '100', 'Compra de Moedas em dolar', 'CONFIRMADO', '2019-02-16 08:37:16', '375,00'), 
+('11111111111', 'JPY', '4,20', '1000', 'Comprar Moeda em iene', 'CONFIRMADO', '2019-02-16 19:17:35', '4200,00'), 
+('22222222222', 'GBP', '4,77', '500', 'Comprar Moeda em Libra esterlina', 'CONFIRMADO', '2019-02-16 13:14:33', '2386,77')
