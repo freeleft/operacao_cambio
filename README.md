@@ -75,6 +75,8 @@ Criar a base de dados com o nome: cambio
 
 Executar o script contido no link [SQL](https://github.com/freeleft/operacao_cambio/blob/master/Documentos/sql.txt) do projeto.
 
+Executar o script da carga de exemplo contido no link [Script Insert](https://github.com/freeleft/operacao_cambio/blob/master/Documentos/script_insert.txt) do projeto.
+
 ![alt text](https://github.com/freeleft/operacao_cambio/blob/master/imagens/xampp2.PNG)
 
 ## Passos a Passo para executar a API com Command Prompt
